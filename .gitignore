@@ -1,0 +1,35 @@
+# Ignorar directorios generados por Maven
+/target/
+!/target/.gitkeep
+
+# Ignorar archivos de configuración del IDE (IntelliJ, Eclipse, VSCode)
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Ignorar dependencias descargadas
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Ignorar archivos de compilación y binarios
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# Ignorar configuraciones de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de cobertura de código
+jacoco.exec
+coverage/
+
+# Ignorar credenciales o archivos sensibles
+.env
+*.key
+*.pem
