@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="edu.eci.cvds.tdd.AppTest" time="0.064" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="edu.eci.cvds.tdd.AppTest" time="0.054" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="maven.user.extensions" value="C:\Users\Lenovo/.m2/extensions.xml"/>
@@ -19,7 +19,7 @@
     <property name="user.country" value="CO"/>
     <property name="session.topDirectory" value="C:\Users\Lenovo\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\2025-1\CVDS\Lab-3\Library"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire8827812164053925883\surefirebooter-20250203104413967_3.jar C:\Users\Lenovo\AppData\Local\Temp\surefire8827812164053925883 2025-02-03T10-44-13_452-jvmRun1 surefire-20250203104413967_1tmp surefire_0-20250203104413967_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire9117677586233539100\surefirebooter-20250203111943517_3.jar C:\Users\Lenovo\AppData\Local\Temp\surefire9117677586233539100 2025-02-03T11-19-43_414-jvmRun1 surefire-20250203111943517_1tmp surefire_0-20250203111943517_2tmp"/>
     <property name="maven.project.settings" value="C:\Users\Lenovo\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\2025-1\CVDS\Lab-3\Library/.mvn/settings.xml"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Lenovo\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\2025-1\CVDS\Lab-3\Library\target\test-classes;C:\Users\Lenovo\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\2025-1\CVDS\Lab-3\Library\target\classes;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;C:\Users\Lenovo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\Lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
@@ -37,7 +37,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="maven.project.conf" value="C:\Users\Lenovo\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\2025-1\CVDS\Lab-3\Library/.mvn"/>
-    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire8827812164053925883\surefirebooter-20250203104413967_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire9117677586233539100\surefirebooter-20250203111943517_3.jar"/>
     <property name="session.rootDirectory" value="C:\Users\Lenovo\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\2025-1\CVDS\Lab-3\Library"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -72,5 +72,5 @@
     <property name="maven.user.settings" value="C:\Users\Lenovo/.m2/settings.xml"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="edu.eci.cvds.tdd.AppTest" time="0.044"/>
+  <testcase name="shouldAnswerWithTrue" classname="edu.eci.cvds.tdd.AppTest" time="0.033"/>
 </testsuite>
