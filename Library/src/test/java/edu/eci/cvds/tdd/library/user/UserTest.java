@@ -1,22 +1,6 @@
 package edu.eci.cvds.tdd.library.user;
 
-public class User {
-    private String name;
-    private String id;
+public class UserTest {
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 }
