@@ -2,8 +2,10 @@ package edu.eci.cvds.tdd.library;
 
 import edu.eci.cvds.tdd.library.book.Book;
 import edu.eci.cvds.tdd.library.loan.Loan;
+import edu.eci.cvds.tdd.library.loan.LoanStatus;
 import edu.eci.cvds.tdd.library.user.User;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -53,8 +55,41 @@ public class Library {
      * @return The new created loan.
      */
     public Loan loanABook(String userId, String isbn) {
-        //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
-        return null;
+        User targetUser = users.stream()
+                .filter(user -> user.getId().equals(userId))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        Book targetBook = books.keySet().stream()
+                .filter(book -> book.getIsbn().equals(isbn))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Book not found"));
+
+        Integer availableBooks = books.get(targetBook);
+        if (availableBooks <= 0) {
+            throw new RuntimeException("Book is not available");
+        }
+
+        boolean hasActiveLoan = loans.stream()
+                .anyMatch(loan ->
+                        loan.getUser().getId().equals(userId) &&
+                                loan.getBook().getIsbn().equals(isbn) &&
+                                loan.getStatus() == LoanStatus.ACTIVE
+                );
+
+        if (hasActiveLoan) {
+            throw new RuntimeException("User already has an active loan for this book");
+        }
+
+        Loan loan = new Loan();
+        loan.setBook(targetBook);
+        loan.setUser(targetUser);
+        loan.setLoanDate(LocalDateTime.now());
+        loan.setStatus(LoanStatus.ACTIVE);
+
+        books.put(targetBook, availableBooks - 1);
+        loans.add(loan);
+        return loan;
     }
 
     /**
@@ -67,8 +102,14 @@ public class Library {
      * @return the loan with the RETURNED status.
      */
     public Loan returnLoan(Loan loan) {
-        //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
-        return null;
+        if (loan == null || loan.getStatus() == LoanStatus.RETURNED) {
+            throw new IllegalArgumentException("The loan does not exist or has already been repaid.");
+        }
+        loan.setStatus(LoanStatus.RETURNED);
+        loan.setReturnDate(LocalDateTime.now());
+        Book book = loan.getBook();
+        books.put(book, books.getOrDefault(book, 0) + 1);
+        return loan;
     }
 
     public boolean addUser(User user) {
